@@ -53,10 +53,16 @@ print("--------------------------------------------")
 
 print(wordnet.synsets('woman'))
 
-print(wordnet.synsets('woman')[0].definition())
-print(wordnet.synsets('woman')[1].definition())
-print(wordnet.synsets('woman')[2].definition())
-print(wordnet.synsets('woman')[3].definition())
+for i in range(len(wordnet.synsets('woman'))):
+  print(wordnet.synsets('woman')[i].definition()+"\n") 
+else:
+  print("Finally finished!")
+
+  
+# print(wordnet.synsets('woman')[0].definition()+"\n") 
+# print(wordnet.synsets('woman')[1].definition()+"\n")
+# print(wordnet.synsets('woman')[2].definition()+"\n")
+# print(wordnet.synsets('woman')[3].definition()+"\n")
 
 print(len(wordnet.synsets('woman')))
 # 4
