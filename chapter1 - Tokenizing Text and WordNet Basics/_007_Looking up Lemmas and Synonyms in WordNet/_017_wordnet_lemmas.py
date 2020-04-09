@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 23 02:34:44 2020
-
-@author: mimaraslan
-"""
 from nltk.corpus import wordnet
 
 syn = wordnet.synsets('woman')[0]
@@ -63,6 +58,33 @@ print(len(set(synonyms)))
 print(set(synonyms))
 
 print("--------------------------------------------")
+
+goodn2 = wordnet.synset('good.n.02')
+print(goodn2.definition())
+# a female person who plays a significant role (wife or mistress or girlfriend) in the life of a particular man
+
+print("--------------------------------------------")
+
+myResult = goodn2.lemmas()[0].antonyms()[0]
+print(myResult.name())
+# evil
+
+print(myResult.synset().definition())
+# the quality of being morally wrong in principle or practice
+
+print("--------------------------------------------")
+
+gooda1 = wordnet.synset('good.a.01')
+print(gooda1.definition())
+# 'having desirable or positive qualities especially those suitable for a thing specified'
+
+myResult = gooda1.lemmas()[0].antonyms()[0]
+print(myResult.name())
+# 'bad'
+
+print(myResult.synset().definition())
+# 'having undesirable or negative qualities'
+
 
 
 
